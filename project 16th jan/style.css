@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+/* had to import the font family from google to use it in the html files */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    /* the asterisk means that all of the styling applies to all of the html pages this CSS file is linked to 
+    font- family is a collection of fonts we are using
+    box sizing sets the total width and height of an element*/
+}
+
+body{
+    background:#000000 ;
+    /* sets the background colour for the whole body to black in all html pages*/
+}
+section{
+    padding: 100px;
+    position: relative;
+    /*position relative means that this part will stay in its place without changing the layout around it
+    padding by 100px means there will be a space all around the elements' content by 100px*/
+}
+
+.header{
+    top: 0;
+    left: 0;
+    z-index: 1000000;
+    justify-content: space-between;
+    display: flex;
+    position: absolute;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    width: 100%;
+    /* justify content is used to distribute space around and between the content items, space between allows a space inbetween each element/content
+    z-index controls how elements that overlap are stacked vertically
+    display flex allows the content in the header class to go to the next line underneath
+    position absolute allows objects to be placed in an exact position and to be placed one on top of another */
+}
+.header .toggle img{
+    cursor: pointer;
+    max-width: 40px;
+    /*changes the cursor to a pointer shape and sets the max-width of the image to 40px*/
+}
+.banner{
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    color: #007FFF;
+    /*changes the color of everything in the banner to #007FFF
+    display flex allows the content in the header class to go to the next line underneath
+    align-items to center aligns all items in this class to the center
+    changes min-height to a 100vh which means that this image will occupy the entire height of the browser
+    width is 100% which means it will use up all the width of the image and stretch it across the browser page */
+}
+
+.banner:before{
+    content: '';
+    z-index: 1;
+    width: 100%;
+    height: 400px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to top,#111,transparent);
+    /*this background linear gradient gives the image an effect wjere the bottom part of the image is fading away*/
+}
+
+.header .logo{
+    color:#007FFF;
+    text-decoration: none;
+    font-size: 1.2em;
+    /*changes font size
+    changes color
+    and as this was a link it gets rid of any decoration e.g. underline that couldve been on the text */
+}
+
+.BgBuilding{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    position: absolute;
+    /*object-fit cover is used to fill the entire browser page if it doesn't already
+    opacity is set to 0.8 so the picture is a little bit transparent
+    height and width are set to 100% the whole image is enclosed */
+
+}
+.content{
+    color: white;
+    /*changes color to white of the content class*/
+
+}
+
+.button{
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 30px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #007FFF;
+    /*background color of the this button is changed
+    padding and margin top is set so that the button has space around it and gives a visual apsect of a button
+    color of the wriitng is set to white
+    display in-line block means that anything other buttons wiht this class will be next to eachother and not underneath etc*/
+}
+
+.banner .content{
+    text-align: center;
+    max-width: 900px;
+    position: relative;
+    z-index: 1;
+}
+.content .banner p{
+    color: #fff;
+    font-size: 1.2em;
+    /*changes color and font size of the p tag within content and banner*/
+}
+
+.content .banner h2{
+    color: #fff;
+    font-size: 5em;
+    /*changes te color and font size of the h2 tag in content and banner*/
+}
+
+.about{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    /*aligns the items in this class in the center
+    display flex allows the content in the header class to go to the next line underneath
+    position relative means that this part will stay in its place without changing the layout around it
+    justify-content to center to set any other content in the middle */
+}
+
+.about .contentBx{
+    width: 50%;
+    text-align: end;
+    max-width: 50%;
+    padding-right: 40px;
+    /*aligns the item to the end so the right of the page while still being in the middle
+    right side of this class is given a space of 40px*/
+
+}
+.text{
+    font-size: 1em;
+    color: #fff;
+}
+.about .imgBox{
+    position: relative;
+    width: 90%;
+    min-width: 40%;
+    min-height: 500px;
+}
+.csImg{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit:cover ;
+    opacity: 0.8;
+    position: absolute;
+     /*object-fit cover is used to fill the entire browser page if it doesn't already
+    opacity is set to 0.8 so the picture is a little bit transparent
+    height and width are set to 100% the whole image is enclosed 
+    top and left fixes the final position of this image and with the use of position absolute, this image is put next to ts closest element */
+
+    
+
+}
+
+.textTitle{
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 10px;
+    font-weight: 600;
+    /*changes the font size to 2em
+    changes color to white 
+    sets the margin of the bottom of this class to 10px
+    sets the thickness of the font to 600*/
+}
+
+.button2{
+    background-color: #ffbd03;
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 30px;
+    color: #fff;
+    text-decoration: none;
+    /*background color of the this button is changed
+    padding and margin top is set so that the button has space around it and gives a visual apsect of a button
+    color of the wriitng is set to white
+    text decoration is set to none so there is underline for this button link
+    display in-line block means that anything other buttons wiht this class will be next to eachother and not underneath etc*/
+
+}
+
+.educationImg{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    position: absolute;
+}
+
+.tenyg{
+    font-size: 3.5em;
+}
+
+.logoee{
+    color:#3C1874 ;
+    text-decoration: none;
+    font-size: 1.2em;
+    /*no decoration on the text
+    color changed to suit the color of the page
+    font size changed to 1.2em*/
+}
+.logosd{
+    color:#ffbd03;
+    text-decoration: none;
+    font-size: 1.2em;
+    /*no decoration on the text
+    color changed to suit the color of the page
+    font size changed to 1.2em*/
+}
+
+h5{
+    font-size: 1.5em;
+    text-align:start;
+    /*all h5 tags in the html pages have a font size of 1.5em 
+    text-align starts aligns all the h5 tags to the left of the page*/
+}
+
+.employmentTitle{
+    font-size: 2em;
+    text-align: end; 
+    /*sets the employment title on right of the page but still in the middle and gives the font size of 2em*/
+}
+
+.button3{
+    background-color:#3C1874 ;
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 30px;
+    color: #fff;
+    text-decoration: none;
+    /*background color of the this button is changed
+    padding and margin top is set so that the button has space around it and gives a visual apsect of a button
+    color of the wriitng is set to white
+    text decoration is set to none so there is underline for this button link
+    display in-line block means that anything other buttons wiht this class will be next to eachother and not underneath etc*/
+
+}
+
+.sdTitle{
+    font-size: 3.5em;
+    /*font size of the self development title is changed */
+}
+
+.myeducationTitle{
+    
+    font-size: 2em; 
+    text-align:start;
+    /*sets the myeducation title on left of the page but still in the middle and gives the font size of 2em*/
+
+}
